@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<h1>Are you sure you want the answer spoiled</h1>
+<button onclick="function haha()">Toasting stuff</button>
+<div id="loader" class="loader" style="display:none;" >toastertoastertoastertoasterthisisper</div>
+<script>
+ function Haha()
+{
+  document.getElementById("loader").style.display = "block";
+}
+</script>
+<?php
+
+if ( isset( $_GET['submit'] ) ) 
+{$name = $_GET['name']; 
+ echo 'Your name is ' . $name; exit;
+}
+?>
