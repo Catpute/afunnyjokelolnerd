@@ -12,9 +12,9 @@
   width: 50px;
   height: 50px;
   margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
+  border: 16px solid #4b7567;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #96fad7;
   width: 50px;
   height: 50px;
   -webkit-animation: spin 2s linear infinite;
@@ -128,12 +128,13 @@ top:0px;
 <input type="button" onclick="HAHA()" value="Submit Answer">
 <script>
     function HAHA() 
-          if (getCookie(ErrorVal) == null || getCookie(ErrorVal) == 0)
+	{
+          if (getCookie("ErrorVal") == null || getCookie("ErrorVal") == 0)
           {
                 setCookie("ErrorVal", getRandomIntInclusive(200, 1000), 8572);
           }
                 alert("Error " + getCookie("ErrorVal") + ": Null Reference exception, please contact the developers or dont look to close at the message :)");
-                    }
+          }
     function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
