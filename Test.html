@@ -129,7 +129,7 @@ top:0px;
 <script>
     function HAHA() {
                 setCookie("ErrorVal", getRandomIntInclusive(200, 1000), 8572);
-                alert("Error " + getCookie(ErrorVal) + ": Null Reference exception, please contact the developers or dont look to close at the message :)");
+                alert("Error " + getCookie("ErrorVal") + ": Null Reference exception, please contact the developers or dont look to close at the message :)");
                     }
     function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
