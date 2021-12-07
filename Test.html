@@ -128,18 +128,37 @@ top:0px;
 <input type="button" onclick="HAHA()" value="Submit Answer">
 <script>
     function HAHA() {
-                                                           const d = new Date();
-                                                           d.setTime(d.getTime());
-                                                           let expires = "expires="+ d.toUTCString();
-                                                           var lol = getRandomIntInclusive(200, 1000);
-                                                           document.cookie = "crabs" + "=" + lol + ";" + expires +";path=/";
-                alert("Error " + getRandomIntInclusive(200, 1000) + ": Null Reference exception, please contact the developers or dont look to close at the message :)");
+                setCookie(ErrorVal, getRandomIntInclusive(200, 1000), 8572);
+                alert("Error " + getCookie(ErrorVal) + ": Null Reference exception, please contact the developers or dont look to close at the message :)");
                     }
     function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+  function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+                                                                    
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
