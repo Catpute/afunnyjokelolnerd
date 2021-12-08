@@ -11,7 +11,7 @@
  {
   var lol = document.getElementById("pw").value;
   
-  if(lol == "M4i5k052Ld" && getCookie("LoggedIn") != 1)
+  if(lol == "M4i5k052Ld" && getCookie("LoggedIn") <= 1)
   {
    setCookie("LoggedIn", 1, 10000);  
    document.getElementById("eep").style.display = "block";
