@@ -4,17 +4,20 @@
  function ADMINNFIDJNJ()
  {
   var lol = document.getElementById("pw");
-  
+  document.getElementById("ckd").style.display = "block";
+  document.getElementById("eep").style.display = "none";
   Console.Log(lol);
   if(lol == M4i5k052Ld && getCookie != 1)
   {
-   setCookie(LoggedIn, 1, 10000);
-   document.getElementById("Admin Login").style.display = "block";
+   setCookie(LoggedIn, 1, 10000);  
+   document.getElementById("eep").style.display = "block";
+   document.getElementById("ckd").style.display = "none";
   }
   else if(lol == M4i5k052Ld)
   {
    Console.Log(getCookie(LoggedIn));
-   document.getElementById("Admin Login").style.display = "block";
+   document.getElementById("eep").style.display = "block";
+   document.getElementById("ckd").style.display = "none";
   }
   
   function setCookie(cname, cvalue, exdays) {
@@ -44,7 +47,7 @@
 <header style="background-image: url('Topbar.png'); background-size: 100% 100%; height: 60px; position: sticky; top:0px;">
 <a href="index.html"> <img src="Icon.png" alt="logo" style="width:56px; float:left;"> </a>
 <button onclick="document.location='https://www.google.com'" class="centered">Google</button>
-<a>Login</a>
+<a onclick="ADMINNFIDJNJ()">Login</a>
 <a href="Cart.html"> <img src="Cart.png" alt="cart" style="width:56px; float:right;"> </a>
 </header>
 </head>
