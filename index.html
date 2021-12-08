@@ -8,13 +8,13 @@
   document.getElementById("ckd").style.display = "block";
     document.getElementById("Admin Login").style.display = "block";
   document.getElementById("eep").style.display = "none";
-  if(lol == "M4i5k052Ld" && getCookie != 1)
+  if(lol == "M4i5k052Ld" && getCookie("LoggedIn") != 1)
   {
-   setCookie(LoggedIn, 1, 10000);  
+   setCookie("LoggedIn", 1, 10000);  
    document.getElementById("eep").style.display = "block";
    document.getElementById("ckd").style.display = "none";
   }
-  else if(lol == "M4i5k052Ld")
+  else if(getCookie("LoggedIn") == 1)
   {
    document.getElementById("eep").style.display = "block";
    document.getElementById("ckd").style.display = "none";
