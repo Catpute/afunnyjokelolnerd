@@ -1,6 +1,12 @@
 <!doctype html>
 <title>Simple site hub</title>
 <script>
+ function MURJ()
+ {
+    document.getElementById("ckd").style.display = "block";
+    document.getElementById("Admin Login").style.display = "block";
+    document.getElementById("eep").style.display = "none";
+ }
  function ADMINNFIDJNJ()
  {
   var lol = document.getElementById("pw").value;
@@ -47,7 +53,7 @@
 <header style="background-image: url('Topbar.png'); background-size: 100% 100%; height: 60px; position: sticky; top:0px;">
 <a href="index.html"> <img src="Icon.png" alt="logo" style="width:56px; float:left;"> </a>
 <button onclick="document.location='https://www.google.com'" class="centered">Google</button>
-<a onclick="ADMINNFIDJNJ()">Login</a>
+<a onclick="MURJ()">Login</a>
 <a href="Cart.html"> <img src="Cart.png" alt="cart" style="width:56px; float:right;"> </a>
 </header>
 </head>
@@ -100,7 +106,7 @@ head {
  <input type = "submit" onclick = "ADMINNFIDJNJ()">
    </form>
   </div>
- <div id="eep">
+ <div id="eep" style="display:none;">
   <p>lol iijijnij</p>
  </div>
 </div>
