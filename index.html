@@ -1,9 +1,50 @@
 <!doctype html>
 <title>Simple site hub</title>
+<script>
+ function ADMINNFIDJNJ()
+ {
+  var lol = document.getElementById("pw");
+  
+  Console.Log(lol);
+  if(lol == M4i5k052Ld && getCookie != 1)
+  {
+   setCookie(LoggedIn, 1, 10000);
+   document.getElementById("Admin Login").style.display = "block";
+  }
+  else
+  {
+   Console.Log(getCookie(LoggedIn));
+   document.getElementById("Admin Login").style.display = "block";
+  }
+  
+  function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+  function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+ }
+</script>
 <head>
 <header style="background-image: url('Topbar.png'); background-size: 100% 100%; height: 60px; position: sticky; top:0px;">
 <a href="index.html"> <img src="Icon.png" alt="logo" style="width:56px; float:left;"> </a>
 <button onclick="document.location='https://www.google.com'" class="centered">Google</button>
+<a>Login</a>
 <a href="Cart.html"> <img src="Cart.png" alt="cart" style="width:56px; float:right;"> </a>
 </header>
 </head>
@@ -48,6 +89,11 @@ head {
 <p>Please enjoy what we have to offer</p>
 <button onclick="document.location='Findtobuy.html'">Product page</button>
 <br>
+<div id="Admin Login" style="display:none;">
+ <div style = "padding: 10px; cursor: move; z-index: 10; background-color: #2196F3; color: #fff;">Admin Panel</div>
+ <input type = "password" id = "pw">
+ <input type = "submit" onclick = "ADMINNFIDJNJ()">
+</div>
 <br>
 <br>
 <br>
